@@ -12,7 +12,7 @@ export default function Transactions() {
       <header className="hero-card">
         <p className="eyebrow">Budsjett-app</p>
         <h1>Transaksjonsoversikt</h1>
-        <p className="lede">Her kan du se de siste registrerte inntektene og utgiftene.</p>
+        <p className="lede">Her får du en enkel oversikt over inntekter og utgifter som er registrert i måneden.</p>
       </header>
       <section className="panel-card">
         <ul className="transaction-list">{sample.map((item) => <li key={item.id} className={item.type === 'income' ? 'income' : 'expense'}><div><strong>{item.description}</strong><p>{item.category} • {item.date}</p></div><span className="amount">{item.type === 'income' ? '+' : '-'}{money.format(item.amount)}</span></li>)}</ul>

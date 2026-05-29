@@ -50,8 +50,8 @@ export default function Dashboard() {
     <main className="dashboard-page">
       <header className="hero-card">
         <p className="eyebrow">Budsjett-app</p>
-        <h1>Din månedlige økonomi</h1>
-        <p className="lede">Legg inn egne inntekter og utgifter, sett et sparemål og følg med på måneden.</p>
+        <h1>Budsjettoversikt</h1>
+        <p className="lede">Registrer inntekter og utgifter, sett et sparemål og velg måned for å følge utviklingen i økonomien din.</p>
       </header>
 
       <section className="summary-grid">
@@ -62,12 +62,13 @@ export default function Dashboard() {
 
       <section className="content-grid">
         <article className="panel-card">
-          <h2>Legg til inntekt eller utgift</h2>
+          <h2>Legg til transaksjon</h2>
+          <p className="subtle-copy">Skriv inn en beskrivelse, et beløp og en kategori. Du kan bruke valgfri kategori for både inntekt og utgift.</p>
           <form className="transaction-form" onSubmit={addTransaction}>
             <label>Type<select value={form.type} onChange={(event) => setForm((current) => ({ ...current, type: event.target.value }))}><option value="income">Inntekt</option><option value="expense">Utgift</option></select></label>
-            <label>Beskrivelse<input value={form.description} onChange={(event) => setForm((current) => ({ ...current, description: event.target.value }))} placeholder="F.eks. Mat eller Lønn" /></label>
-            <label>Beløp<input type="number" min="0" value={form.amount} onChange={(event) => setForm((current) => ({ ...current, amount: event.target.value }))} placeholder="0" /></label>
-            <label>Kategori<input value={form.category} onChange={(event) => setForm((current) => ({ ...current, category: event.target.value }))} placeholder="Egendefinert kategori" /></label>
+            <label>Beskrivelse<input value={form.description} onChange={(event) => setForm((current) => ({ ...current, description: event.target.value }))} /></label>
+            <label>Beløp<input type="number" min="0" value={form.amount} onChange={(event) => setForm((current) => ({ ...current, amount: event.target.value }))} /></label>
+            <label>Kategori<input value={form.category} onChange={(event) => setForm((current) => ({ ...current, category: event.target.value }))} /></label>
             <label>Dato<input type="date" value={form.date} onChange={(event) => setForm((current) => ({ ...current, date: event.target.value }))} /></label>
             <button type="submit">Legg til</button>
           </form>

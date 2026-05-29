@@ -1,6 +1,6 @@
 .dashboard-page { max-width: 1200px; margin: 0 auto; padding: 24px 18px 56px; display: flex; flex-direction: column; gap: 18px; }
 .hero-card, .panel-card, .mini-card { background: rgba(15,23,42,0.95); border: 1px solid rgba(148,163,184,0.18); border-radius: 24px; box-shadow: 0 18px 40px rgba(15,23,42,0.35); }
-.hero-card { padding: 24px; }
+.hero-card { padding: 24px; background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.95)); }
 .eyebrow { text-transform: uppercase; letter-spacing: .28em; font-size: .75rem; color: #c4b5fd; }
 .hero-card h1 { margin: 8px 0 10px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.02; color: #fff; }
 .lede { color: #cbd5e1; max-width: 700px; }
@@ -15,7 +15,8 @@
 .mini-card.warning { border-color: rgba(251,191,36,0.45); }
 .mini-card.neutral { border-color: rgba(56,189,248,0.45); }
 .panel-card { padding: 18px; }
-.panel-card h2 { color: #fff; margin-bottom: 12px; font-size: 1.15rem; }
+.panel-card h2 { color: #fff; margin-bottom: 6px; font-size: 1.15rem; }
+.subtle-copy { color: #cbd5e1; font-size: .95rem; margin-bottom: 12px; }
 .transaction-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .transaction-form label, .goal-input, .month-picker { display: flex; flex-direction: column; gap: 6px; color: #e2e8f0; font-size: .95rem; }
 .transaction-form input, .transaction-form select, .goal-input input, .month-picker input { background: #111827; border: 1px solid rgba(148,163,184,0.25); border-radius: 12px; color: #fff; padding: 10px 12px; font: inherit; }
